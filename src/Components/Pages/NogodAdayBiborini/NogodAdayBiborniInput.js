@@ -13,7 +13,7 @@ const NogodAdayBiborniInput = () => {
   } = useForm();
 
 const onSubmit = data => {
-    axios.post('https://polli-shonchoy-server.vercel.app/nogodAdayBiborini', data)
+    axios.post('https://polli-shonchoy-server-er34.vercel.app/nogodAdayBiborini', data)
     .then(res=> console.log(res) )
     .catch(err=> console.log(err))
     

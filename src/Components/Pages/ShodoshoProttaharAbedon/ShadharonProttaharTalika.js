@@ -12,7 +12,7 @@ const ShadharonProttaharTalika = () => {
       }
     
     useEffect(()=> {
-        fetch('https://polli-shonchoy-server.vercel.app/shodoshoProttahar')
+        fetch('https://polli-shonchoy-server-er34.vercel.app/shodoshoProttahar')
         .then(res=>res.json())
         .then(data=>setData(data))
         .catch(err=>console.log(err))

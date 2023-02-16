@@ -14,7 +14,7 @@ const MulPata = () => {
     }
   
   useEffect(()=> {
-      fetch('https://polli-shonchoy-server.vercel.app/shadharonShodosho')
+      fetch('https://polli-shonchoy-server-er34.vercel.app/shadharonShodosho')
       .then(res=>res.json())
       .then(data=>setData(data))
       .catch(err=>console.log(err))

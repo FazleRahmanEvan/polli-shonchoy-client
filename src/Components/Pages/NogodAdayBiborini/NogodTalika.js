@@ -12,7 +12,7 @@ const NogodTalika = () => {
       }
     
     useEffect(()=> {
-        fetch('https://polli-shonchoy-server.vercel.app/nogodAdayBiborini')
+        fetch('https://polli-shonchoy-server-er34.vercel.app/nogodAdayBiborini')
         .then(res=>res.json())
         .then(data=>setData(data))
         .catch(err=>console.log(err))

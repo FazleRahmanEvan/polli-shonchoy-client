@@ -13,7 +13,7 @@ const ShomitiCreate = () => {
   //     }
  
   useEffect(()=> {
-      fetch('https://polli-shonchoy-server.vercel.app/shomitiCreate')
+      fetch('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate')
       .then(res=>res.json())
       .then(data=>setData(data))
       .catch(err=>console.log(err))
@@ -26,7 +26,7 @@ const ShomitiCreate = () => {
   } = useForm();
 
 const onSubmit = data => {
-    axios.post('https://polli-shonchoy-server.vercel.app/shomitiCreate', data)
+    axios.post('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate', data)
     .then(res=> console.log(res) )
     .catch(err=> console.log(err))
     

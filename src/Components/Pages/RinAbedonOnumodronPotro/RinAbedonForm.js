@@ -7,7 +7,7 @@ const RinAbedonForm = () => {
     const [data, setData]= useState({});
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server.vercel.app/rinAbedonOnumodonPotro/${_id}`,{
+      fetch(`https://polli-shonchoy-server-er34.vercel.app/rinAbedonOnumodonPotro/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

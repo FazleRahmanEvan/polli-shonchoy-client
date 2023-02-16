@@ -13,7 +13,7 @@ const RinAbedonOnumodronPotro = () => {
   } = useForm();
 
 const onSubmit = data => {
-    axios.post('https://polli-shonchoy-server.vercel.app/rinAbedonOnumodonPotro', data)
+    axios.post('https://polli-shonchoy-server-er34.vercel.app/rinAbedonOnumodonPotro', data)
     .then(res=> console.log(res) )
     .catch(err=> console.log(err))
     

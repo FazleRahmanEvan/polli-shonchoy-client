@@ -7,7 +7,7 @@ const ShonchoyUttolonForm = () => {
     const [data, setData]= useState({});
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server.vercel.app/shonchoyUttolon/${_id}`,{
+      fetch(`https://polli-shonchoy-server-er34.vercel.app/shonchoyUttolon/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

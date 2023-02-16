@@ -7,7 +7,7 @@ const OwaryNogodAdayBiboroni = () => {
     const [data, setData]= useState({});
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server.vercel.app/nogodAdayBiborini/${_id}`,{
+      fetch(`https://polli-shonchoy-server-er34.vercel.app/nogodAdayBiborini/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

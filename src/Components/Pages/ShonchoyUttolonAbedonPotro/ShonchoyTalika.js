@@ -12,7 +12,7 @@ const ShonchoyTalika = () => {
       }
     
     useEffect(()=> {
-        fetch('https://polli-shonchoy-server.vercel.app/shonchoyUttolon')
+        fetch('https://polli-shonchoy-server-er34.vercel.app/shonchoyUttolon')
         .then(res=>res.json())
         .then(data=>setData(data))
         .catch(err=>console.log(err))

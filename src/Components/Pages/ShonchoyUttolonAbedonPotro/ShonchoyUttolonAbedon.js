@@ -11,7 +11,7 @@ const ShonchoyUttolonAbedon = () => {
   } = useForm();
 
 const onSubmit = data => {
-    axios.post('https://polli-shonchoy-server.vercel.app/shonchoyUttolon', data)
+    axios.post('https://polli-shonchoy-server-er34.vercel.app/shonchoyUttolon', data)
     .then(res=> console.log(res) )
     .catch(err=> console.log(err))
     

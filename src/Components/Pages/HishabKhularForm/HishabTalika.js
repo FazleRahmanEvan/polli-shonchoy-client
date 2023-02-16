@@ -13,7 +13,7 @@ const HishabTalika = () => {
   }
 
 useEffect(()=> {
-    fetch('https://polli-shonchoy-server.vercel.app/hishabKhularForm')
+    fetch('https://polli-shonchoy-server-er34.vercel.app/hishabKhularForm')
     .then(res=>res.json())
     .then(data=>setData(data))
     .catch(err=>console.log(err))

@@ -7,7 +7,7 @@ const HishabForm = () => {
     const [data, setData]= useState({});
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server.vercel.app/hishabForm/${_id}`,{
+      fetch(`https://polli-shonchoy-server-er34.vercel.app/hishabForm/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

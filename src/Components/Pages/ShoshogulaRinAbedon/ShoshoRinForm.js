@@ -7,7 +7,7 @@ const ShoshoRinForm = () => {
     const [data, setData]= useState({});
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server.vercel.app/shoshsogulaRin/${_id}`,{
+      fetch(`https://polli-shonchoy-server-er34.vercel.app/shoshsogulaRin/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",
