@@ -11,12 +11,6 @@ const MulPataRow = ({index, item, refetch}) => {
         <td>{item.pitaShamirNam}</td>
         <td>{item.matarNam}</td>
         <td>{item.mobileNumber}</td>
-        <td>{}</td>
-        <td>{}</td>
-        <td>{}</td>
-        {/* <td>{}</td> */}
-        {/* <td>{item.gram}</td> */}
-        {/* <td>{}</td> */}
         <td>{item.upazilla}</td>
         <td>{item.zilla}</td>
         <td><div class="dropdown dropdown-left">

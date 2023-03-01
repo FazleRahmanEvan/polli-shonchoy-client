@@ -27,6 +27,9 @@ import ShonchoyTalika from './Components/Pages/ShonchoyUttolonAbedonPotro/Shonch
 import ShoshoGulaTalika from './Components/Pages/ShoshogulaRinAbedon/ShoshoGulaTalika';
 import ShodoshoProttaTalikaRow from './Components/Pages/ShodoshoProttaharAbedon/ShodoshoProttaTalikaRow';
 import ShadharonProttaharTalika from './Components/Pages/ShodoshoProttaharAbedon/ShadharonProttaharTalika';
+import ShomitiCreate from './Components/Dashboard/MulPata/ShomitiCreate';
+import ShomitiList from './Components/Dashboard/MulPata/ShomitiList/ShomitiList';
+import ShomitirNam from './Components/Dashboard/MulPata/ShomitiList/ShomitirNam';
 
 
 function App() {
@@ -57,6 +60,9 @@ function App() {
       <Route path="/shonchoyTalika" element={<ShonchoyTalika/>}></Route>
       <Route path="/shoshogularinTalika" element={<ShoshoGulaTalika/>}></Route>
       <Route path="/shodoshoProttaharTalika" element={<ShadharonProttaharTalika/>}></Route>
+      <Route path="/shomitiList" element={<ShomitiCreate/>}></Route>
+      <Route path="/shomitiTable" element={<ShomitiList/>}></Route>
+      <Route path="/shomitiNam/:_id" element={<ShomitirNam/>}></Route>
 
       </Routes>
   

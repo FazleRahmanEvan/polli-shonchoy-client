@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import MulPataRow from './MulPataRow';
 import ShomitiCreate from './ShomitiCreate';
 
@@ -26,9 +27,10 @@ const MulPata = () => {
         সমিতি ও সদস্যগণের তথ্য</h1>
           
 
-          {/* <ShomitiCreate></ShomitiCreate> */}
+         <h1 className="text-2xl font-Bold mt-8 ml-20  underline"><Link  to='/shomitiTable'>সমিতি তালিকা</Link></h1>
+         <h1 className="text-2xl font-Bold mt-8 ml-20  underline"><Link  to='/shomitiList'>সমিতি তৈরি করুন</Link></h1>
 
-            <div class="overflow-x-auto mt-16">
+            <div class="overflow-x-auto mt-16 mb-20">
   <table class="table w-full">
    
     <thead>
@@ -38,9 +40,6 @@ const MulPata = () => {
         <th>পিতা/স্বামীর নাম</th>
         <th>মাতার নাম</th>
         <th>মোবাইল</th>
-        <th>এন আইডি</th>
-        <th>একাউন্ট নং</th>
-        <th>লিঙ্গ</th>
         {/* <th>নিজের নাম</th> */}
         {/* <th>গ্রাম</th> */}
         {/* <th>ডাকঘর</th> */}

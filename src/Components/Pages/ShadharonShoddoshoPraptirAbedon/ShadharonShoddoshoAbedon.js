@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import ReactPrint from 'react-to-print';
-import { useRef } from 'react';
+// import ReactPrint from 'react-to-print';
+// import { useRef } from 'react';
 
 const ShadharonShoddoshoAbedon = () => {
-  const ref=useRef()
+  // const ref=useRef()
   
   const {
     register,
@@ -13,14 +13,48 @@ const ShadharonShoddoshoAbedon = () => {
     handleSubmit,
   } = useForm();
 
-const onSubmit = data => {
-    axios.post('https://polli-shonchoy-server-er34.vercel.app/shadharonShodosho', data)
-    .then(res=> console.log(res) )
-    .catch(err=> console.log(err))
-    
-    alert(`সদস্য ফর্ম তৈরি করা হল.`);
+const [data, setData]= useState([])
+    const [refetch, setFetch] = useState(false);
+  
+  
+    const handleFetch = () => {
+        setFetch((prev)=>!prev)
+      }
+
+      
+const onSubmit = formData => {
+
+  const shomitiId = formData.shomitirId;
+
+    if (!shomitiId) {
+      alert('Please choose a shomiti');
+      return;
+    }
+
+    const selectedShomiti = data.find(shomiti => shomiti._id === shomitiId);
+
+    const payload = {
+      ...formData,
+      shomitirNam: selectedShomiti.shomitirNam
+    }
+
+
+  axios.post('https://polli-shonchoy-server-er34.vercel.app/shadharonShodosho', payload)
+  .then(res=> console.log(res) )
+  .catch(err=> console.log(err))
+  
+  alert(`সদস্য ফর্ম তৈরি করা হল.`);
+  
+  
 
 }
+    
+    useEffect(()=> {
+        fetch('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate')
+        .then(res=>res.json())
+        .then(data=>setData(data))
+        .catch(err=>console.log(err))
+      },[refetch])
 
 // if(loading){
 //     return <Loading/>
@@ -38,16 +72,17 @@ const onSubmit = data => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <section>
             <div className="form-control w-full max-w-xs mt-5 ml-5">
-              <input
-                type="text"
-                placeholder="সমিতির নাম"
-                className="input input-bordered w-full max-w-xs"
-                {...register("shomitirNam", {
-                  required: {
-                    message: "First Name is Required",
-                  },
-                })}
-              />
+                 <select    {...register("shomitirId")}  className="select select-bordered w-full max-w-xs">
+                    <option disabled selected>সমিতির নাম</option>
+                          {
+                               data?.map((data,index) =><option 
+                                key={index}
+                                value={data._id}
+                                label={data.shomitirNam}
+                               ></option>)
+                           }
+                   
+                     </select>
             </div>
             <div className="form-control w-full max-w-xs mt-5 ml-5">
               <input

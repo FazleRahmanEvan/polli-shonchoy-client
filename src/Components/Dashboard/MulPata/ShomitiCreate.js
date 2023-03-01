@@ -12,12 +12,12 @@ const ShomitiCreate = () => {
   //       setFetch((prev)=>!prev)
   //     }
  
-  useEffect(()=> {
-      fetch('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate')
-      .then(res=>res.json())
-      .then(data=>setData(data))
-      .catch(err=>console.log(err))
-    },);
+  // useEffect(()=> {
+  //     fetch('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate')
+  //     .then(res=>res.json())
+  //     .then(data=>setData(data))
+  //     .catch(err=>console.log(err))
+  //   },);
 
   const {
     register,
@@ -44,7 +44,7 @@ const onSubmit = data => {
           <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10 ml-6 mb-10">
-              <div className="form-control w-full max-w-xs mt-5 ml-5">
+              {/* <div className="form-control w-full max-w-xs mt-5 ml-5">
                 <input
                   type="text"
                   placeholder="জেলা"
@@ -56,8 +56,8 @@ const onSubmit = data => {
                     }
                 })}
                 />
-              </div>
-
+              </div> */}
+{/* 
               <div className="form-control w-full max-w-xs mt-5 ml-5">
                 <input
                   type="text"
@@ -70,14 +70,27 @@ const onSubmit = data => {
                     }
                 })}
                 />
-              </div>
+              </div> */}
 
-              <div className="form-control w-full max-w-xs mt-5 ml-5">
+              {/* <div className="form-control w-full max-w-xs mt-5 ml-5">
                 <input
                   type="text"
                   placeholder="ইউনিয়ন"
                   className="input input-bordered w-full max-w-xs"
                   {...register("Union", {
+                    required:{
+                        
+                        message:'First Name is Required'
+                    }
+                })}
+                />
+              </div> */}
+              <div className="form-control w-full max-w-xs mt-5 ml-5">
+                <input
+                  type="text"
+                  placeholder="ডাকঘর"
+                  className="input input-bordered w-full max-w-xs"
+                  {...register("Dakghor", {
                     required:{
                         
                         message:'First Name is Required'
@@ -165,7 +178,7 @@ const onSubmit = data => {
           </div>
           </form>
         
-
+{/* 
           <div className='mt-14 ml-14 lg:ml-56 '>
             <div class="form-control">
               <div class="input-group">
@@ -176,7 +189,7 @@ const onSubmit = data => {
                 <button class="btn">অনুসন্ধান</button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
       </section>
