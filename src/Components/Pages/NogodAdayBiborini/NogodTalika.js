@@ -12,48 +12,45 @@ const NogodTalika = () => {
       }
     
     useEffect(()=> {
-        fetch('https://polli-shonchoy-server-er34.vercel.app/nogodAdayBiborini')
+        fetch('https://polli-shonchoy-server-er34.vercel.app/shomitiCreate')
         .then(res=>res.json())
         .then(data=>setData(data))
         .catch(err=>console.log(err))
       },[refetch])
 
     return (
-       <div>
-        <div class="overflow-x-auto mt-16">
-<table class="table w-full">
-
-<thead>
-<tr>
-  {/* <th>সদস্য কোড নং</th> */}
-  <th>ইউনিয়নের নাম</th>
-  {/* <th>পিতা/স্বামীর নাম</th>   */}
-  <th>সমিতির নাম</th>
-  <th>তারিখ</th>
-  <th>সমিতির কোড</th>
-  <th>বিবরণ</th>
-</tr>
-</thead>
-<tbody>
-
-     
-{
-  data?.map((item, index)=> (
-   
-      <NogodTalikaRow
-      key={index}
-      item={item}
-      index={index}
-      refetch={handleFetch}
-      />
-      
-  ))
-}
-
-</tbody>
-</table>
-</div>
-  </div>
+      <div class="overflow-x-auto mt-16">
+      <table class="table w-full">
+       
+        <thead>
+          <tr>
+            <th>সমিতির নাম</th>
+            <th>সমিতির কোড নং</th>
+            <th>মোবাইল</th>
+            <th>বিবরণ</th>
+           
+          
+          </tr>
+        </thead>
+        <tbody>
+    
+               
+        {
+            data?.map((item, index)=> (
+             
+                <NogodTalikaRow
+                key={index}
+                item={item}
+                index={index}
+                refetch={handleFetch}
+                />
+                
+            ))
+          }
+        
+        </tbody>
+      </table>
+    </div>
     );
 };
 

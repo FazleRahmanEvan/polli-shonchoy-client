@@ -1,13 +1,15 @@
 import ReactPrint from 'react-to-print';
 import React, { useRef, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './OwaryNogod.css';
 
 const OwaryNogodAdayBiboroni = () => {
     const {_id} = useParams();
     const [data, setData]= useState({});
+    
 
     useEffect(() => {
-      fetch(`https://polli-shonchoy-server-er34.vercel.app/nogodAdayBiborini/${_id}`,{
+      fetch(`http://localhost:5000/NogodShomitiNam/${_id}`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -26,17 +28,17 @@ const OwaryNogodAdayBiboroni = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         const image = new Image();
-    
+  
         image.onload = function() {
           ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
           ctx.font = '18px bold';
           
-          ctx.fillText((data?.UnionerNam), 350, 377);
-          ctx.fillText(data?.tarikh, 1100, 377);
-          ctx.fillText(data?.NogodErShomitirNam, 350, 437);
-          ctx.fillText(data?.shomitirCode, 1130, 437);
-        
-
+          ctx.fillText(data?.Union, 350, 377);
+          ctx.fillText(data?.shomitirNam, 350, 437);
+          // ctx.fillText(data?.shomitirCodeNumber, 1130, 437);
+          ctx.fillText((<input type="text" placeholder="Type here" class=" border-none input w-full max-w-xs"/>), 150, 577)
+          
+      
         };
     
         image.src = 'https://i.ibb.co/pfyfMyP/image.jpg';
@@ -44,11 +46,15 @@ const OwaryNogodAdayBiboroni = () => {
       }
      
     }, [data]);
+    
     return (
+
         <div className='text-center mb-20'>
-        <div ref={ref}>
-         <canvas ref={canvasRef} width={1420} height={1900} />
-       </div>
+        <div  ref={ref}>
+          {/* <h1 className='mt--96'>PolliShonchoy</h1> */}
+         <canvas ref={canvasRef} width={1420} height={1900}></canvas> 
+         <input type="text" placeholder="Type here" class="aNogod border-none input  max-w-xs"/>
+        </div>
          <ReactPrint
          trigger={() => <button class="btn">Print Pdf</button>}
          content={() => ref.current}
@@ -58,3 +64,5 @@ const OwaryNogodAdayBiboroni = () => {
 };
 
 export default OwaryNogodAdayBiboroni;
+
+// <input type="text" placeholder="Type here" class=" border-none input w-full max-w-xs"/>

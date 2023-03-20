@@ -19,40 +19,32 @@ useEffect(()=> {
     .catch(err=>console.log(err))
   },[refetch])
     return (
-        <div>
-              <div class="overflow-x-auto mt-16">
-  <table class="table w-full">
-   
-    <thead>
-      <tr>
-        <th>সদস্য কোড নং</th>
-        <th>সদস্যের নাম</th>
-        <th>পিতা/স্বামীর নাম</th>  
-        <th>উপজেলা</th>
-        <th>জেলা</th>
-        <th>বিবরণ</th>
-      </tr>
-    </thead>
-    <tbody>
-
-           
-    {
-        data?.map((item, index)=> (
-         
-            <RinAbedonTalikaRow
-            key={index}
-            item={item}
-            index={index}
-            refetch={handleFetch}
-            />
-            
-        ))
-      }
-    
-    </tbody>
-  </table>
-</div>
+      <div>
+        <div class="overflow-x-auto mt-16">
+          <table class="table w-full">
+            <thead>
+              <tr>
+                <th>সদস্য কোড নং</th>
+                <th>সদস্যের নাম</th>
+                <th>পিতা/স্বামীর নাম</th>
+                <th>উপজেলা</th>
+                <th>জেলা</th>
+                <th>বিবরণ</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.map((item, index) => (
+                <RinAbedonTalikaRow
+                  key={index}
+                  item={item}
+                  index={index}
+                  refetch={handleFetch}
+                />
+              ))}
+            </tbody>
+          </table>
         </div>
+      </div>
     );
 };
 

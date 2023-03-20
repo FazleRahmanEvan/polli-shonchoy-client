@@ -49,7 +49,7 @@ function App() {
       <Route path="/adayBohi" element={<AdayBohi></AdayBohi>}></Route>
       <Route path="/hishabForm/:_id" element={<HishabForm></HishabForm>}></Route>
       <Route path="/shadharonShodosho/shodoshoCode/:_id" element={<ShadharOnShodosho></ShadharOnShodosho>}></Route>
-      <Route path="/nogodAdayBiborini/:_id" element={<OwaryNogodAdayBiboroni></OwaryNogodAdayBiboroni>}></Route>
+      <Route path="/NogodShomitiNam/:_id" element={<OwaryNogodAdayBiboroni></OwaryNogodAdayBiboroni>}></Route>
       <Route path="/rinAbedonOnumodonPotro/:_id" element={<RinAbedonForm></RinAbedonForm>}></Route>
       <Route path="/shonchoyUttolon/:_id" element={<ShonchoyUttolonForm></ShonchoyUttolonForm>}></Route>
       <Route path="/shoshsogulaRin/:_id" element={<ShoshoRinForm></ShoshoRinForm>}></Route>
