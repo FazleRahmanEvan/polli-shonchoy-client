@@ -177,9 +177,9 @@ const Navbar = () => {
         {/* <li><Link to="/shonchoyUttolonAbedon">সঞ্চয় আবেদনপত্র</Link></li>
         <li><Link to="/shoshogulaRinAbedon">শস্যগোলা ঋণ</Link></li>
         <li> <Link to="/shodoshoProttahar">সদস্যপদ প্রত্যাহার</Link></li> */}
-        <li className='text-sm'><Link to="/mulPata">মূলপাতা </Link></li>
+        {/* <li className='text-sm'><Link to="/mulPata">মূলপাতা </Link></li>
         <li className='text-sm'> <Link to="/adayChok">আদায়ছক</Link></li>
-        <li className='text-sm'> <Link to="/adayBohi">আদায়বহি</Link></li>
+        <li className='text-sm'> <Link to="/adayBohi">আদায়বহি</Link></li> */}
     </ul>
   </div>
   {/* <div class="navbar-end">
